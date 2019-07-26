@@ -23,7 +23,7 @@ public class TicketsToIndia extends WebdriverUtils  {
     private TicketsToIndiaSearchPage ticketsToIndiaSearchPage;
     private TicketsToIndiaResultsPage ticketsToIndiaResultsPage;
 
-    @Before
+    @Before("Test")
     public void TicketsToIndia(){
         driver= WebdriverUtils.getWebdriver();
         ticketsToIndiaSearchPage = new TicketsToIndiaSearchPage(driver);
@@ -60,7 +60,7 @@ public class TicketsToIndia extends WebdriverUtils  {
     public void resultsShouldGetDisplayed() throws Throwable {
         Assert.assertTrue(ticketsToIndiaResultsPage.resultsSize()>0);
     }
-    @After
+    @After("@Test")
     public void tearDown(){
         driver.close();
     }
