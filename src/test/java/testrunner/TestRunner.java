@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                 "pretty:target/cucumber.json",// for json result
                 "json:target/cucumberxmlreport.html",
                  },
-        tags = {"@Test"},
+        tags = {"@EndToEnd"},
         features = "classpath:features",
         glue = {"com.test.stepdefs",
 
@@ -19,6 +19,5 @@ import org.junit.runner.RunWith;
         }
 )
 public class TestRunner {
-
 
 }
