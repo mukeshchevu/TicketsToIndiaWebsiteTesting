@@ -19,7 +19,6 @@ public class CustomerDetails {
     @Before
     public static void setup(){
         RestAssured.baseURI = "https://reqres.in";
-//
     }
 
     private String URL;
